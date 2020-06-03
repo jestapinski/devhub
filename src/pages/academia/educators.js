@@ -1,24 +1,24 @@
 import React, { useRef } from 'react';
-import Layout from '../components/dev-hub/layout';
+import Layout from '../../components/dev-hub/layout';
 import { Helmet } from 'react-helmet';
-import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../hooks/use-site-metadata';
 import {
     colorMap,
     fontSize,
     screenSize,
     size,
     lineHeight,
-} from '../components/dev-hub/theme';
-import { H3, ArticleH2, P } from '../components/dev-hub/text';
+} from '../../components/dev-hub/theme';
+import { H3, ArticleH2, P } from '../../components/dev-hub/text';
 import styled from '@emotion/styled';
-import Button from '../components/dev-hub/button';
-import HeroBanner from '../components/dev-hub/hero-banner';
-import SectionHeader from '../components/dev-hub/section-header';
-import AcademiaSignUpForm from '../components/dev-hub/academia-sign-up-form';
-import HeroBannerImage from '../images/1x/Academia_Hero.svg';
-import TeachMongoDBImage from '../images/1x/TeachMongoDB.svg';
-import AcademiaLeafImage from '../images/1x/Academia_Leaf.svg';
-import useMedia from '../hooks/use-media';
+import Button from '../../components/dev-hub/button';
+import HeroBanner from '../../components/dev-hub/hero-banner';
+import SectionHeader from '../../components/dev-hub/section-header';
+import AcademiaSignUpForm from '../../components/dev-hub/academia-sign-up-form';
+import HeroBannerImage from '../../images/1x/Academia_Hero.svg';
+import TeachMongoDBImage from '../../images/1x/TeachMongoDB.svg';
+import AcademiaLeafImage from '../../images/1x/Academia_Leaf.svg';
+import useMedia from '../../hooks/use-media';
 
 const StyledHeroBanner = styled(HeroBanner)`
     margin: 0 ${size.medium};
@@ -98,6 +98,7 @@ const StyledSpan = styled('span')`
 
 const SignUp = styled('div')`
     margin-top: ${size.xlarge};
+    margin-bottom: ${size.xxlarge};
 `;
 
 const StyledAcademiaSignUpForm = styled(AcademiaSignUpForm)`
@@ -112,7 +113,7 @@ const StyledP = styled(P)`
 `;
 
 const StyledLeafImage = styled('img')`
-    margin-top: 400px;
+    margin-top: 350px;
 `;
 
 export default () => {
@@ -197,6 +198,20 @@ export default () => {
                     <div>
                         <EligibilityContent>
                             <StyledSectionHeader>
+                                For Students
+                            </StyledSectionHeader>
+                            <BodyText>
+                                If you’re a student, you can apply for the{' '}
+                                <StyledLink href="https://education.github.com/pack">
+                                    GitHub Student Developer Pack
+                                </StyledLink>{' '}
+                                and get access to MongoDB Atlas, University
+                                on-demand content and certifications.
+                            </BodyText>
+                        </EligibilityContent>
+
+                        <EligibilityContent>
+                            <StyledSectionHeader>
                                 For Educators
                             </StyledSectionHeader>
                             <BodyText>
@@ -221,20 +236,6 @@ export default () => {
                                         </StyledSpan>
                                     </li>
                                 </StyledBullet>
-                            </BodyText>
-                        </EligibilityContent>
-
-                        <EligibilityContent>
-                            <StyledSectionHeader>
-                                For Students
-                            </StyledSectionHeader>
-                            <BodyText>
-                                If you’re a student, you can apply for the{' '}
-                                <StyledLink href="https://education.github.com/pack">
-                                    GitHub Student Developer Pack
-                                </StyledLink>{' '}
-                                and get access to MongoDB Atlas, University
-                                on-demand content and certifications.
                             </BodyText>
                         </EligibilityContent>
                     </div>
