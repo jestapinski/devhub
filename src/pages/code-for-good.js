@@ -43,18 +43,18 @@ const HeaderText = styled('div')`
     }
 `;
 
-const HeaderLink = styled(Link)`
-    color: ${colorMap.darkGreen};
-    margin-left: ${size.mediumLarge};
-    margin-top: ${size.small};
-    :hover {
-        color: ${colorMap.darkGreen};
-    }
-    @media ${screenSize.upToMedium} {
-        margin-left: ${size.small};
-        font-size: ${fontSize.tiny};
-    }
-`;
+// TODO: uncomment when header link is ready
+// const HeaderLink = styled(Link)`
+//     color: ${colorMap.darkGreen};
+//     display: inline;
+//     margin-top: ${size.large};
+//     margin-left: ${size.mediumLarge};
+//     white-space: nowrap;
+//     @media ${screenSize.upToLarge} {
+//         display: block;
+//         margin: 0;
+//     }
+// `;
 
 const StyledHeroBanner = styled(HeroBanner)`
     margin: 0 ${size.medium};
@@ -230,14 +230,15 @@ export default () => {
                             <StyledButton
                                 primary
                                 hasArrow={false}
-                                href="https://o-fish.github.io"
+                                href="https://wildaid.github.io"
                             >
                                 Build your own O-FISH app
                             </StyledButton>
 
-                            <HeaderLink href="#" tertiary>
-                                Learn why we created O-FISH
-                            </HeaderLink>
+                            {/* TODO: uncomment when learn link href is decided */}
+                            {/* <HeaderLink href="#" tertiary>
+                            Learn why we created O-FISH
+                        </HeaderLink> */}
                         </HeaderActionsContainer>
                     </div>
                     <StyledLogoImage
@@ -286,13 +287,13 @@ export default () => {
                                     free Atlas account
                                 </StyledParagraphLink>{' '}
                                 and{' '}
-                                <StyledParagraphLink href="https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials">
-                                    MongoDB Community Edition
+                                <StyledParagraphLink href="https://www.mongodb.com/try/download/database-tools">
+                                    MongoDB Database Tools
                                 </StyledParagraphLink>{' '}
                                 to build your own O-FISH instance.
                             </BodyText>
 
-                            <StyledLink href="https://o-fish.github.io">
+                            <StyledLink href="https://wildaid.github.io">
                                 Start building now
                             </StyledLink>
                         </VesselAppTextContainer>
@@ -307,7 +308,7 @@ export default () => {
                                 anyone can contribute.
                             </BodyText>
 
-                            <StyledLink href="https://o-fish.github.io/contribute/">
+                            <StyledLink href="https://wildaid.github.io/contribute/">
                                 Contribute your code
                             </StyledLink>
                         </VesselAppTextContainer>
